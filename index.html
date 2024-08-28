@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
+<script type="text/javascript">
+  (function(){
+    emailjs.init("6AD_bIhboC8tjhOQc");
+  })();
+</script>
+<script src="script.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitali Kapil- Portfolio</title>
+    <style>
+        body{
+            background-color: rgb(251, 247, 243);
+            color: rgb(177, 101, 15);
+            font-family: "Outfit", sans-serif;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        nav{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: rgb(241, 188, 44);
+            height: 70px;
+
+        }
+        nav ul{
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li{
+            list-style: none;
+            margin: 0 23px;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: rgb(253, 246, 233);
+        }
+        nav ul li a:hover{
+            color: rgb(177, 101, 15);
+        }
+        .left{
+            font-size: 2rem;
+        }
+        .left1{
+            font-size: 4rem;
+            margin-left: -100px;
+        }
+        .firstsection{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 80px 0;
+
+        }
+        .leftsection{
+            
+            font-size: 3rem;
+            margin: 110px 0;
+        }
+        .firstsection div{
+            width: 30%;
+
+        }
+        .rightsection img{
+            width: 80px;
+            margin: 10px 0;
+            
+        }
+        .secondsection{
+            margin:auto;
+            max-width: 100vw;
+            background-color:  rgb(241, 188, 44);
+            display: flex;
+            
+        }
+        .paragraph {
+            margin-left: 100px;
+        }
+        .right1{
+            font-size: 20px;
+            margin-top: 140px;
+            margin-left: 40px;
+            margin-right: 80px;
+            color: rgb(247, 227, 191);
+        }
+        .p2{
+            text-align: right;
+            margin-top: 0px;
+            margin-right: 150px;
+        }
+        .thirdsection{
+            background-color: rgb(236, 217, 166);
+        }
+       
+        .fourthsection {
+            background: linear-gradient(135deg, rgba(241, 188, 44, 0.9), rgba(177, 101, 15, 0.9)), 
+                        url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+            padding: 50px 0;
+            text-align: center;
+            color: white;
+        }
+        
+        
+        .fourthsection h1 {
+            font-size: 3rem;
+            color: rgb(255, 255, 255);
+            margin-bottom: 40px;
+        }
+        
+        #contactForm {
+            background-color: rgb(255, 255, 255);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        
+        #contactForm label {
+            font-size: 1.2rem;
+            color: rgb(177, 101, 15);
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        #contactForm input,
+        #contactForm textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid rgb(177, 101, 15);
+            border-radius: 5px;
+            font-size: 1rem;
+            background-color: rgb(251, 247, 243);
+            color: rgb(100, 61, 33);
+        }
+        
+        #contactForm textarea {
+            height: 150px;
+            resize: none;
+        }
+        
+        #contactForm button {
+            background-color: rgb(177, 101, 15);
+            color: rgb(255, 255, 255);
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        #contactForm button:hover {
+            background-color: rgb(241, 188, 44);
+        }
+        .project-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        
+        .project-item {
+            background-color: rgba(241, 188, 44, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            max-width: 300px;
+            text-align: center;
+            color: white;
+        }
+        
+        .project-item h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .project-item p {
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+        
+        .project-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease;
+        }
+        
+        .project-item img:hover {
+            transform: scale(1.05);
+        }
+        
+        .git-link {
+            background-color: white;
+            color: rgb(177, 101, 15);
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        
+        .git-link:hover {
+            background-color: rgb(177, 101, 15);
+            color: white;
+        }
+        .button-group {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px; /* Space between buttons */
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 8px 16px; /* Button padding */
+            border-radius: 4px; /* Rounded corners */
+            text-decoration: none;
+            font-weight: normal; /* Regular font weight */
+            color: white;
+            font-size: 0.9rem; /* Font size */
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center; /* Center text inside button */
+            border: none; /* Remove border */
+        }
+        
+        .resume-btn {
+            background: linear-gradient(135deg, #ff6f61, #d64d79); /* Gradient background */
+        }
+        
+        .linkedin-btn {
+            background: linear-gradient(135deg, #0077b5, #00a0dc); /* Gradient background */
+        }
+        
+        .github-btn {
+            background: linear-gradient(135deg, #333, #555); /* Gradient background */
+        }
+        
+        .btn:hover {
+            transform: scale(1.05); /* Slightly scale up on hover */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+        }
+        
+        .resume-btn:hover {
+            background: linear-gradient(135deg, #e85d75, #c8376c); /* Darker gradient for hover effect */
+        }
+        
+        .linkedin-btn:hover {
+            background: linear-gradient(135deg, #005582, #0077b5); /* Darker gradient for hover effect */
+        }
+        
+        .github-btn:hover {
+            background: linear-gradient(135deg, #444, #666); /* Darker gradient for hover effect */
+        }
+        
+        
+
+
+    </style>
+</head>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <header>
+        <nav>
+            <div class="left">Mitali's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="#1">About</a></li>
+                    <li><a href="#2">Projects</a></li>
+                    <li><a href="#3">Contact me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstsection">
+            <div class="leftsection"><font style="color: black;">Hi, I am </font> Mitali Kapil, <font style="color: black;">and I am <span id="element"></span></font><br><br>
+                <div class="button-group">
+                    <a href="path/to/your/resume.pdf" class="btn resume-btn" download>Download Resume</a>
+                    <a href="https://www.linkedin.com/in/your-linkedin-username" target="_blank" class="btn linkedin-btn">LinkedIn</a>
+                    <a href="https://github.com/your-github-username" target="_blank" class="btn github-btn">GitHub</a>
+                </div>
+            </div>
+            
+    
+            
+            <div class="rightsection">
+                <img src="d4tvukbt5mra37cvwklk.gif" alt="" style="width: 120%;">
+            </div>
+        </section>
+        <section class="secondsection">
+            <h1 id="1"><p class="paragraph"><font size= 30rem>About</font><br></p></h1>
+            <div class="left1"><br><img src="pic-mitali.jpg" alt=""></div>
+            <div class="right1">My name is Mitali Kapil and i did my undergraduation in BCA from Maharaja Surajmal Institute(GGSIPU) and currently i am enrolled as an MCA student in Bharti Vidyapeeth Institute of Computer Application and Management(GGSIPU). I am a keen about learning new stuff in the field of technology by actively participating in events and networking with like minded individuals. I have participated in programs like google cloud study jams, facilitator programs, Scholarship programs in Coursera. My field of intrest is Cybersecurity, Cloud computing, Data Science and AI. I also enjoy web development. </div>
+        </section>
+        <section class="thirdsection">
+            <h1 id="2"><p class="p2"><font size= 30rem>Projects</font><br></p></h1>
+            <div class="project-list">
+                <div class="project-item">
+                    <h2>Cloud detection and data collector project</h2>
+                    
+                    <a href="https://github.com/mitalikapil/cloud_detection_using_cv_module" target="_blank">
+                        <img src="final_output_map_with_clouds.png" alt="Project Image">
+                    </a>
+                    <p>
+                        <a href="https://github.com/mitalikapil/cloud_detection_using_cv_module" target="_blank" class="git-link">View on GitHub</a>
+                    </p>
+                </div>
+        
+        </section>
+        <section class="fourthsection" id="3" style="padding: 50px 0">
+            <h1>Contact Me</h1>
+            <div class="left4">
+    <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea><br><br>
+        
+        <button type="submit">Send Message</button>
+    </form></div>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const formData = new FormData(this);
+            const data = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                message: formData.get('message')
+            };
+
+            fetch('https://script.google.com/macros/s/AKfycbw0Gu6Xx079xdRix8JDSbaFzeL6QjWqQ6Kq2K-Phw3boHCowbmxb3SBQj7ezF08dAFe/exec', {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => alert('Message sent successfully!'))
+            .catch(error => alert('Error sending message.'));
+        });
+    </script>
+
+            
+
+
+        </section>
+
+    </main>
+    <script>
+        var typed = new Typed('#element', {
+          strings: ['<i>an MCA student</i>', ' <i>a Cyber Security Enthusiast</i>','<i>passionate about Coding!</i>'],
+          typeSpeed: 50,
+        });
+        
+      </script>
+      
+    
+</body>
+</html>
